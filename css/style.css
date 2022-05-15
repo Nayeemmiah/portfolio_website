@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(221, 161, 181);
+}
+.container{
+    width: 1140px;
+    height: 100vh;
+    margin: 0 auto;
+    background: lightgoldenrodyellow;
+   
+}
+.underline{
+    border-top: 5px solid #CCCCCC;
+    width: 8%;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+/* 1st section start */
+header{
+    background: #87509C;
+
+   
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+   
+  
+}
+nav .logo-part{
+width: 25%;
+
+margin-top: 5px;
+
+
+}
+nav .menu-part{
+    width: 70%;
+   
+    
+}
+.menu-part ul{
+list-style: none;
+margin: 15px 0;
+text-align: right;
+}
+.menu-part li{
+    display: inline-block;
+    margin: 0 10px;
+    
+}
+.menu-part a{
+    color: aliceblue;
+    font-size: 18px;
+    padding: 8px 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .5s all ease-in-out;
+  
+}
+.menu-part a:hover{
+    border-radius: 5px;
+    background: #5d326e;
+}
+.menu-part a:active{
+    border-radius: 5px;
+    background: #076879;
+}
+
+
+
+.writing-part{
+    width: 100%;
+    text-align: center;
+    
+}
+.writing-part h1{
+    width: 75%;
+    margin: 25px auto;
+    text-align: justify;
+    color: aliceblue;
+ 
+
+}
+.writing-part button{
+    background: #EB7D4B;
+    outline: none;
+    border: none;
+    padding: 8px 15px;
+    margin: 50px auto;
+    border-radius: 6px;
+    color: aliceblue;
+    font-size: 20px;
+    position: relative;
+    animation-name: workwithus;
+    animation-duration: 2s;
+    transition: .5s;
+    animation-iteration-count: infinite;
+}
+@keyframes workwithus{
+    0%{transform: scale(1.01);}
+    50%{transform: scale(1.05);}
+    75%{transform: scale(1.1);}
+    75%{transform: scale(1);}
+    
+}
+/* 1st section end */
+
+
+/* 2nd section start */
+
+#service{
+    background: #17C2A4;
+}
+.service-writing-part{
+    width: 100%;
+    text-align: center;
+  
+}
+
+.service-writing-part h1{
+    text-transform: uppercase;
+    padding: 15px 0;
+
+}
+.service-feature-part{
+    display: flex;
+    justify-content: space-around;
+}
+.feature-part{
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #CCCCCC;
+    margin: 25px auto;
+    transition: .5s;
+    color: #fff;
+
+}
+.feature-part:hover{
+   background: #07af61;
+   transform: scale(1.1);
+   border-radius: 10px;
+  
+
+}
+.feature-part img{
+    width: 80px;
+}
+.feature-part h1{
+   text-transform: uppercase;
+   font-size: 18px;
+
+}
+/* 2nd section end */
+
+
+
+/* 3rd section start */
+
+#design-team-part{
+    background: #E7F1F8;
+}
+.team-writing-part{
+    text-align: center;
+    
+}
+.team-writing-part h1{
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+.team-card-all{
+   display: flex;
+   justify-content: space-around;
+    padding: 10px;
+    
+}
+.team-member {
+    text-align: center;
+    width: 32%;
+    padding: 8px;
+    border: 1px solid #EB7D4B;
+}
+.team-member .image img{
+    border: 1px solid blueviolet;
+    width: 60px;
+    border-radius: 50%;
+    background: #17C2A4;
+}
+.team-member a{
+    text-decoration: none;
+    color: #1cb2e4;
+    display: inline-block;
+    padding: 8px;
+}
+
+.team-member i{
+  padding: 10px;
+  background: #CCCCCC;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: .5s;
+}
+.team-member i:hover{
+    background: #07af61;
+    color: #fff;
+    transform: scale(1.2);
+  }
+/* 3rd section end */
+
+/* 4th section start */
+  .skills-part{
+      background:#fff;
+  }
+  .skills-writing-part{
+    text-align: center;
+}
+.skills-writing-part h1{
+    padding: 20px 0;
+}
+.skills-detail{
+    display: flex;
+    justify-content: space-around;
+  
+}
+.skills-num{
+    text-align: center;
+}
+.skills-num h3{
+    padding: 20px 0;
+   
+
+}
+
+@keyframes growProgressBars {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+@property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  } 
+
+  div[role="progressbar"] {
+    --size: 8rem;
+    --fg: #30BAE7;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBars 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+ 
+  div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+
+  div[role="progressbar1"] {
+    --size: 8rem;
+    --fg: #D74680;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBars 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  div[role="progressbar1"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+div[role="progressbar2"] {
+    --size: 8rem;
+    --fg: #15C7A8;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBars 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  div[role="progressbar2"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+  div[role="progressbar3"] {
+    --size: 8rem;
+    --fg: #ED9066;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBars 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  div[role="progressbar3"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+
+
+
+
+/* 4th section end */
+
+
+footer{
+    background: #3C5499;
+    color: #fff;
+   
+}
+.footer-writing-part{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sms-section{
+    text-align: center;
+    margin: 20px auto;
+}
+.user-input input{
+    padding: 12px;
+    outline: none;
+    border: none;
+    width: 40%;
+    background: #273A71;
+    font-size: 18px;
+    color: #fff;
+    
+}
+::placeholder{
+    color: #fff;
+    font-size: 18px;
+   
+}
+
+.user-input textarea{
+    width: 80%;
+    padding: 8px;
+    background: #273A71;
+    margin: 10px auto;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+.user-input button{
+background: #30BAE7;
+margin: 2px 0;
+padding: 12px 12px;
+border: none;
+box-shadow: 0px 5px 1px #3388a5;
+}
+
+.footer-menu ul{
+    background: #273A71;
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+.footer-menu ul li{
+    padding: 0 5px;
+    
+
+}
+.footer-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    padding: 15px;
+    transition: .5s;
+}
+.footer-menu ul li a:hover{
+   
+    background: #3388a5;
+   
+}
